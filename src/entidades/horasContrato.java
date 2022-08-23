@@ -7,6 +7,7 @@ public class horasContrato {
     private LocalDate data;
     private Double valorPorHora;
     private Integer hora;
+    
     public horasContrato() {
     }
     public horasContrato(LocalDate data, Double valorPorHora, Integer hora) {
@@ -33,7 +34,7 @@ public class horasContrato {
         this.hora = hora;
     }
     
-    public Double totalvalor(){    
+    public double totalvalorporhora(){    
         return valorPorHora*hora;
     }
     

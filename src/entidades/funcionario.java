@@ -87,8 +87,9 @@ public class funcionario {
             if (x.getData().getYear()==ano && x.getData().getMonthValue()==mes){
                 soma+=x.totalvalorporhora();
             }
-            return soma;
+            
         }
+        return soma;
 
     }
 
