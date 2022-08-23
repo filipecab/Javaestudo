@@ -17,6 +17,12 @@ public class app {
         Locale.setDefault(Locale.US);
         Scanner sc=new Scanner(System.in);
 
+        String nome=sc.next();
+        String nivel=sc.next();
+        double salario=sc.nextDouble();
+
+        String cliente=sc.next();
+
         LocalDate data=LocalDate.of(sc.nextInt(),sc.nextInt(),sc.nextInt());
         
         
