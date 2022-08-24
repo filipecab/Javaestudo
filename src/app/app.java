@@ -37,16 +37,16 @@ public class app {
                
                 if (opc==1){
                     String nivel="JUNIOR";
-                    func=new funcionario(nome, Enumerados.JUNIOR, sal, dep);
+                    func=new funcionario(nome, Enumerados.JUNIOR, sal, new Cliente(dep));
                 }
                 else if(opc==2){
                     String nivel="MID_LEVEL";
-                    func=new funcionario(nome, Enumerados.valueOf(nivel), sal, dep);
+                    func=new funcionario(nome, Enumerados.valueOf(nivel), sal, new Cliente(dep));
 
                 }
                 else if(opc==3){
                     String nivel="SENIOR";
-                    func=new funcionario(nome, Enumerados.valueOf(nivel), sal, dep);
+                    func=new funcionario(nome, Enumerados.valueOf(nivel), sal, new Cliente(dep));
                 }
                 else{
                     System.out.println("tente novamente!");

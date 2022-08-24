@@ -5,6 +5,10 @@ public class Cliente {
 
     public Cliente() {
     }
+  
+    public Cliente(String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;
