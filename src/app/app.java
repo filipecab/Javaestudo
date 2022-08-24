@@ -1,8 +1,6 @@
 package app;
 import java.util.Scanner;
 import java.util.Locale;
-import java.util.ArrayList;
-import java.util.List;
 import java.time.LocalDate;
 import entidades.Cliente;
 import entidades.Enumerados;
@@ -24,7 +22,7 @@ public class app {
             System.out.println("Quantos funcionarios deseja cadastrar: ");
             int quant=sc.nextInt();
 
-            for (int i=0;i<=quant;i++){
+            for (int i=0;i<quant;i++){
                 System.out.println("digite o nome do funcionario n"+i+1);
                 String nome=sc.nextLine();
                 System.out.println("qual o salario do seu funcionario?");
@@ -37,7 +35,7 @@ public class app {
                
                 if (opc==1){
                     String nivel="JUNIOR";
-                    func=new funcionario(nome, Enumerados.JUNIOR, sal, new Cliente(dep));
+                    func=new funcionario(nome, Enumerados.valueOf(nivel), sal, new Cliente(dep));
                 }
                 else if(opc==2){
                     String nivel="MID_LEVEL";
@@ -52,7 +50,18 @@ public class app {
                     System.out.println("tente novamente!");
                     i=i-1;
                 }
-                
+                System.out.println("digite a quantidade de contratos");
+                int qunt_cont=sc.nextInt();
+
+                for (int j=0;j<qunt_cont;i++){
+                    LocalDate data=LocalDate.of(sc.nextInt(), sc.nextInt(), sc.nextInt());
+                    double valorPorHora=sc.nextDouble();
+                    int hora=sc.nextInt();
+                    horasContrato hr_cont=new horasContrato(data,valorPorHora,hora);
+                    func.adcContrato(hr_cont);
+                }
+
+                System.out.println("Usuario cadastrado.");
 
 
             }
